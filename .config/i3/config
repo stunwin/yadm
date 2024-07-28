@@ -225,6 +225,11 @@ exec --no-startup-id xrandr --output eDP-1 --primary --mode 2560x1440 --pos 0x0 
 #feh BG
 exec --no-startup-id feh --bg-fill ~/Documents/Wallpapers/aurora1.jpg
 
+exec --no-startup-id firefox
+exec --no-startup-id firefox
+
+
+
 for_window [class="love"] floating enableF
 assign [class="Gnome-terminal"] "1: "
 assign [class="firefox"] "3: "
