@@ -112,11 +112,11 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
-set $ws4 "4: 󰠮"
-set $ws5 "5: "
+set $ws1 "1:  "
+set $ws2 "2:  "
+set $ws3 "3:  "
+set $ws4 "4: 󰠮 "
+set $ws5 "5:  "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -212,7 +212,7 @@ bar {
 
         position bottom
         tray_output primary
-        status_command ~/bumblebee-status/bumblebee-status -m pomodoro pulseout brightness redshift network date time battery\
+        status_command /usr/bin/bumblebee-status -m pomodoro pulseout brightness redshift network date time battery\
         -p time.format="%l:%M %p" date.format="%a, %b %d" redshift.show_transition="false"\
         -t iceberg-powerline
 }
@@ -220,7 +220,7 @@ bar {
 
 # fire xrandr to set up docked resolution setting
 # TODO figure out how to get this working with autorandr
-exec --no-startup-id xrandr --output eDP-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI-2 --off
+# exec --no-startup-id xrandr --output eDP-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI-2 --off
 
 #feh BG
 exec --no-startup-id feh --bg-fill ~/Documents/Wallpapers/aurora1.jpg
@@ -231,6 +231,6 @@ exec --no-startup-id firefox
 
 
 for_window [class="love"] floating enableF
-assign [class="Gnome-terminal"] "1: "
-assign [class="firefox"] "3: "
-assign [class="obsidian"] "4: 󰠮"
+assign [class="Gnome-terminal"] "1:  "
+assign [class="firefox"] "3:  "
+assign [class="obsidian"] "4: 󰠮 "

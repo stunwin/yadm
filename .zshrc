@@ -101,11 +101,11 @@ setopt IGNORE_EOF
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias ohmyzshconfig="nvim ~/.oh-my-zsh"
 eval $(thefuck --alias fuck)
 alias i3config="nvim ~/.config/i3/config"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
-
+alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
