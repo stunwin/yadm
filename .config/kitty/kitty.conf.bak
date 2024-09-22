@@ -6,10 +6,23 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-# font_family      monospace
+font_family      NotoMono Nerd Font
 # bold_font        auto
 # italic_font      auto
 # bold_italic_font auto
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #: You can specify different fonts for the bold/italic/bold-italic
 #: variants. To get a full list of supported fonts use the `kitty
@@ -1158,7 +1171,7 @@
 
 #: The foreground and background colors.
 
-# background_opacity 1.0
+# background_opacity .9
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -1182,7 +1195,7 @@
 #: this option when reloading the config will only work if
 #: dynamic_background_opacity was enabled in the original config.
 
-# background_blur 0
+ # background_blur 1
 
 #: Set to a positive value to enable background blur (blurring of the
 #: visuals behind a transparent window) on platforms that support it.
@@ -1217,7 +1230,7 @@
 #: decrease_background_opacity) or the remote control facility.
 #: Changing this option by reloading the config is not supported.
 
-# background_tint 0.0
+# background_tint 4.0
 
 #: How much to tint the background image by the background color. This
 #: option makes it easier to read the text. Tinting is done using the
@@ -2047,7 +2060,7 @@ map f1 launch_tab nvim
 
 #: Close window
 
-# map kitty_mod+w close_window
+ map kitty_mod+w close_window
 # map shift+cmd+d close_window
 
 #: Next window
@@ -2447,7 +2460,7 @@ map f1 launch_tab nvim
 
 #: Reload kitty.conf
 
-# map kitty_mod+f5 load_config_file
+ map kitty_mod+, load_config_file
 # map ctrl+cmd+,   load_config_file
 
 #::  Reload kitty.conf, applying any changes since the last time it
@@ -2528,3 +2541,9 @@ map f1 launch_tab nvim
 
 #: 
 
+
+
+# BEGIN_KITTY_THEME
+# Dracula
+include current-theme.conf
+# END_KITTY_THEME

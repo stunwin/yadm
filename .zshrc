@@ -106,11 +106,16 @@ eval $(thefuck --alias fuck)
 alias i3config="nvim ~/.config/i3/config"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
 alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
+alias godotnvim="nvim --listen /tmp/nvim.pipe"
+alias todolist="nvim /home/stunwin/Obsidian/vimvault/todo.md"
+alias backlightoff="lampe -s 13 n"
+alias backlighton="lampe -s 13 y"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export GCM_CREDENTIAL_STORE="gpg"
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
