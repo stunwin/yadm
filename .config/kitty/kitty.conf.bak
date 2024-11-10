@@ -2544,6 +2544,6 @@ map f1 launch_tab nvim
 
 
 # BEGIN_KITTY_THEME
-# Dracula
+# One Half Dark
 include current-theme.conf
 # END_KITTY_THEME
