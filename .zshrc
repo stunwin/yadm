@@ -127,3 +127,8 @@ function yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/stunwin/.lmstudio/bin"
+# trying to get swayWM to use integrateg graphics
+export WLR_DRM_DEVICES=/dev/dri/card2
