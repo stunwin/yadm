@@ -1,0 +1,9 @@
+show=drun
+width=25%
+height=25%
+prompt=fight me you coward
+allow_images=true
+matching=fuzzy
+insensitive=true
+key_exit=Ctrl-c
+term=kitty

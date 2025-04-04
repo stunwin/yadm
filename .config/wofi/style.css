@@ -1,0 +1,42 @@
+@import url(".config/wofi/colors.css");
+
+
+window {
+margin: 5px;
+border: 2px solid @bgl;
+background-color: @bg;
+}
+
+#input {
+border-radius: 2px;
+margin: 5px;
+border: 2px solid @bg_yellow;
+background-color: @bgl;
+}
+
+#inner-box {
+margin: 5px;
+border: none;
+}
+
+#outer-box {
+margin: 5px;
+}
+
+#scroll {
+border: 2px solid @fg;
+margin: 5px;
+}
+
+#text {
+margin: 5px;
+color: @fg
+} 
+
+#entry:selected {
+background-color: @bg_blue;
+}
+
+#text:selected {
+color: @bg;
+}

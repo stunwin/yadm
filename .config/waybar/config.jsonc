@@ -1,0 +1,104 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+    ],
+    "modules-right": [
+        "custom/player",
+        "custom/paru",
+        "pulseaudio",
+        "clock",
+        "tray",
+        "custom/power"
+    ],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+        },
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "format": "{:%I:%M %p, %a | %D}",
+        "tooltip-format": "<big>{:%Y %B}\n<tt>{calendar}</tt></big>",
+        "format-alt": "{:%Y-%m-%d}",
+	"actions": {
+		"on-click-right": "mode",
+		"on-scroll-up": "shift_up",
+		"on-scroll-down": "shift_down"
+	}
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/player": {
+        "format": "{}",
+        "escape": true,
+        "exec": "~/.config/waybar/custom/player.sh",
+        "return-type": "json",
+        "interval": 5,
+        "max-length": 50,
+        "on-click-left": "playerctl previous",
+        "on-click-middle": "playerctl play-pause",
+        "on-click-right": "playerctl next"
+    },
+    "custom/power": {
+        "format" : "⏻ ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate",
+                        "logout": "hyprctl dispatch exit",
+		}
+    },
+
+    "custom/paru": {
+      "format": "{} ",
+      "tooltip-format": "There are {} packages with available updates. Click to make it happen.",
+      "interval": 3600,
+      "exec": "paru -Qu | wc -l",
+      "exec-if": "exit 0",
+      "on-click": "kitty -e paru -Syu; pkill -SIGRTMIN+8 waybar",
+      "signal": 8
+    }
+}
