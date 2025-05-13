@@ -6,7 +6,7 @@ player=${player:-$(playerctl -l 2>/dev/null | head -n 1)}
 
 # If no player found
 if [ -z "$player" ]; then
-    echo "{\"text\": \"🎵 No media\", \"tooltip\": \"Nothing playing\"}"
+    echo "{\"text\": \" No media\", \"tooltip\": \"Nothing playing\"}"
     exit
 fi
 
@@ -23,4 +23,4 @@ else
 fi
 
 # Output JSON for Waybar
-echo "{\"text\": \"  $icon    $artist - $title\", \"tooltip\": \"$status: $artist - $title\"}"
+echo "{\"text\": \"  $icon    $artist - $title\", \"tooltip\": \"$status: $artist - $title\"}"
