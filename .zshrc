@@ -99,6 +99,7 @@ alias backlightoff="lampe -s 13 n"
 alias backlighton="lampe -s 13 y"
 alias py="python3"
 alias jpgconvert="~/Scripts/jpgconvert.sh"
+alias ls="lsd"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
