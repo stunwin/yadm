@@ -55,6 +55,18 @@ play = [
 
 [open]
 rules = [
+	# js
+	{ name = "*.js", use = [
+		"edit",
+		"open",
+		"reveal",
+	] },
+	# html
+	{ name = "*.html", use = [
+		"edit",
+		"open",
+		"reveal",
+	] },
 	# Folder
 	{ name = "*/", use = [
 		"edit",

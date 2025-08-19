@@ -18,3 +18,12 @@ vim.api.nvim_create_autocmd({ 'BufWinEnter' }, {
   desc = 'load view (folds), when opening file',
   command = 'silent! loadview',
 })
+
+-- navigate wrapped lines in markdown
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.keymap.set('n', 'j', 'gj')
+    vim.keymap.set('n', 'k', 'gk')
+  end,
+})

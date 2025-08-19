@@ -58,9 +58,11 @@ vim.opt.conceallevel = 2
 vim.diagnostic.config {
   virtual_text = true,
   signs = true,
-  underline = false,
+  underline = true,
   update_in_insert = false,
   severity_sort = false,
 }
 
 vim.opt.hlsearch = true
+
+vim.opt.autochdir = true

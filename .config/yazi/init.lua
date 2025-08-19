@@ -1,1 +1,1 @@
--- ~/.config/yazi/init.lua
+--- ~/.config/yazi/init.lua

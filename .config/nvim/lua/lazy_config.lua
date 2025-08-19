@@ -2,14 +2,16 @@ require('lazy').setup(
   {
     { import = 'plugins' },
 
-    'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+    -- just listing the simple oneliners here. everything else is in /lua/plugins
+
+    'tpope/vim-sleuth',
+    'numToStr/Comment.nvim',
     {
       'norcalli/nvim-colorizer.lua',
       config = function()
         require('colorizer').setup()
       end,
     },
-    { 'numToStr/Comment.nvim', opts = {} },
     {
       'navarasu/onedark.nvim',
       priority = 1000,
